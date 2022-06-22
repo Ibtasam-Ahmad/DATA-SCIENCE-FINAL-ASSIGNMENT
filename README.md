@@ -1,11 +1,5 @@
 # DATA-SCIENCE-FINAL-ASSIGNMENT
-DATA SCIENCE FINAL ASSIGNEMENT
-# Final Project Assignment
-# We have given a heart disease dataset in class. Perform EDA Analysis consisting of 8-9 Graphs.
-# The Model applied should be accurate to around 90 %
-# You may apply any model of your choice.
-# Below are the dataset links given for your ease.
-# Construct Confusion Matrix displayed in a heat map ( Self - Learning )
+
 
 import pandas as pd
 import numpy as np
@@ -100,21 +94,20 @@ processed_x, y_transformed = make_classification(n_samples=1000, n_features=4,n_
 clf = RandomForestClassifier(max_depth=2, random_state=0)
 clf.fit(processed_x, y_transformed)
 
-# creating a RF classifier
+
 clf = RandomForestClassifier(n_estimators = 1025)
 
-# Training the model on the training dataset
-# fit function is used to train the model using the training sets as parameters
+
 clf.fit(processed_x, y_transformed)
 
-# performing predictions on the test dataset
+
 y_pred = clf.predict(processed_x)
 
-# metrics are used to find accuracy or error
+
 from sklearn import metrics
 print()
 
-# using metrics module for accuracy calculation
+
 ans = metrics.accuracy_score(y_transformed, y_pred)
 ans = ans*100
 print("ACCURACY OF THE MODEL: ",ans,"%")
@@ -140,13 +133,13 @@ import pandas as pd
 seed = 8
 kfold = model_selection.KFold(n_splits = 3,random_state = seed, shuffle=True)
 
-# initialize the base classifier
+
 base_cls = DecisionTreeClassifier()
 
-# no. of base classifier
+
 num_trees = 1024
 
-# bagging classifier
+
 model = BaggingClassifier(base_estimator = base_cls,n_estimators = num_trees,random_state = seed)
 
 results = model_selection.cross_val_score(model, processed_x, y_transformed, cv = kfold)
@@ -157,5 +150,6 @@ print(results.mean())
 
 
 
+[Data Science Final Assignment.pdf](https://github.com/Ibtasam-Ahmad/DATA-SCIENCE-FINAL-ASSIGNMENT/files/8958672/Data.Science.Final.Assignment.pdf)
 
-[Data Science.pdf](https://github.com/Ibtasam-Ahmad/DATA-SCIENCE-FINAL-ASSIGNMENT/files/8956963/Data.Science.pdf)
+
