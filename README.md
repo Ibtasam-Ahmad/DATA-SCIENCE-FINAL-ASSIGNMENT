@@ -129,6 +129,7 @@ print("ACCURACY OF THE MODEL: ",ans,"%")
 
 
 
+
 from sklearn import model_selection
 from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -154,3 +155,7 @@ print(results.mean())
 
 
 
+
+
+
+[Data Science.pdf](https://github.com/Ibtasam-Ahmad/DATA-SCIENCE-FINAL-ASSIGNMENT/files/8956963/Data.Science.pdf)
